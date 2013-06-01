@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Yem</title>
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- javascripts -->
+  <script src="js/vendors/raphael-min.js" type="text/javascript"> </script>
+  <script src="js/vendors/jquery.js" type="text/javascript"> </script>
+  <script src="js/vendors/mustache.js" type="text/javascript"></script>
+  <script src="js/webservice.js" type="text/javascript"></script>
+  <script src="js/user.js" type="text/javascript"></script>
+  <script src="js/Interface.js" type="text/javascript"></script>
+  <script src="js/vendors/double-metaphone.js" type="text/javascript"></script>
+  <script src="js/Cyril.js" type="text/javascript"></script>
+  <script src="js/Feelanimation.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+  </header>  
+
+    <div id="screen"></div>
+
+     <!-- Page 0 VEILLE --> 
+      <script id="template_veille" type="text/template">
+        <article id="BlocText">
+          <p>Vivez une expérience culinaire</br>organisée par vos sens.</p>
+          <p>Yem vous guide dans l'élaboration de votre menu.</p>
+        </article>
+
+        <div id="start">
+          <p class="fade">EFFLEUREZ CETTE ZONE POUR COMMENCER</p>
+        </div>
+
+      </script>
+
+      <!-- PAGE 1 DEMARRAGE ETAPE 1 -->
+      <script id="template_demarrage" type="text/template">
+       <article id="presentation">
+      
+          YEM est une interface digitale révolutionnaire, affranchie des contraintes physiques, elle déchiffrera et analysera vos émotions présentes et les traduira en une expérience sensorielle et culinaire inédite et personnalisée.
+
+        </article>
+
+         <article id="instruction">
+          <div class="cadreG"></div>
+            <div id="phrase">
+              <div id="mic"></div>
+            L’icône reconnaissance vocale apparaitra au bas de chaque page pour vous indiquer que votre réponse peut être enregistrée.
+            </div>
+          <div class="cadreD"></div>
+      
+         </article> 
+
+         <article id="instructionPrenom">
+          <div class="cadreG"></div>
+            <div id="phrasePrenom">
+              
+              <span>Prennons un exemple, dites votre nom pour commencer</span>
+              <input type="text" name="surname" id="speech_surname"></input>
+            </div>
+          <div class="cadreD">
+          </div>
+      
+         </article> 
+      </script>
+
+      <!-- PAGE 2 ACQUISITION -->
+      <script id="template_acquisition" type="text/template">
+      <article id="instructionScan">
+          <div class="cadreG2"></div>
+            <div id="phrase2">
+                Nous allons proceder au scanner de vos émotions...
+            </div>
+          <div class="cadreD2"></div>
+      
+      </article> 
+
+      <div id="frame_video">
+          <div id="phrasePrenom">
+          </div>
+      </div>
+        <div id="name2">
+          <div id="name2_1">{{name}}</div>
+      </div> 
+      </script>
+
+       <!-- PAGE 3 INTERPRETATION DE L'ACQUISITION -->
+      <script id="template_interpretation" type="text/template">
+      <article id="surpris">
+          SURPRIS(E)
+        </article> 
+
+         <div id="text_interpretation">
+            Surpris(e) : tel est votre état d ésprit au moment où vous lisez ces lignes. Brisons les règles, cassons les codes et faisons de cet instant spécial un moment que vous ne pourrez pas oublier...
+        </div>
+      </script>
+
+       <!-- PAGE 4 INTRODUCTION À L'ANIMATION -->
+      <script id="template_transition_introduction" type="text/template">
+      <div id="contener_text">
+             <div id="initialisation">
+               INITIALISATION
+              </div> 
+
+             <div id="de">
+              DE
+             </div>
+
+            <div id="analyse">
+               L ANALYSE 
+            </div>
+
+            <div id="sensorielle">
+              SENSORIELLE
+            </div>
+        </div>
+      </script> 
+
+       <!-- PAGE 5 QUESTIONNAIRE -->
+      <script id="template_questionnaire" type="text/template">   
+
+      <article id="question" data-id="{{id}}">
+         
+           {{question}}
+        </article>
+
+        <div id="conteneur_Question">
+           {{#answers}}
+           <div class="encadrementQuestion"  data-id="{{id}}">
+              {{content}}
+            </div>
+           {{/answers}}              
+        </div>   
+
+      </script>
+      <!-- PAGE 6  RESULTAT QUESTIONNAIRE -->
+      <script id="template_resultat" type="text/template">
+       <h2 id="meatType">{{friendlyType}}</h2>
+  
+        <div id="slider_plat">
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+        </div>
+      <div id="phrase_proposition">
+        Validez-vous ce plat ? (oui/non)
+      </div>
+
+      </script>  
+
+      <!-- PAGE 7  FIN -->
+
+      <script id="template_fin" type="text/template">  
+         <div id="espace_menu">
+          <div class="elmt_menu">ENTREE </div>
+          <div class="menu_variable">{{starter}}
+          </div>
+        
+          <div class="elmt_menu">PLAT </div>
+          <div class="menu_variable">{{main}}
+          </div>
+          <div class="elmt_menu">DESSERT </div>
+          <div class="menu_variable">{{dessert}}
+          </div>
+    </div>
+
+    <div id="trait"></div>
+  
+      <div id="merci">
+        Merci d’avoir participé à l’expérience Yem.<br />
+    Nous espérons que ce menu émotionnel vous donnera pleinement satisfaction. Votre serveur Jerôme vous attend pour vous
+    conduire à votre table.      
+      </div>
+
+      <div id="serveur"></div>
+
+      </script>
+
+
+  <footer>
+  </footer>  
+  
+
+
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

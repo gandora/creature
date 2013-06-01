@@ -1,0 +1,294 @@
+@font-face{  
+	font-family: "HelveticaNeueLTCom-Roman"; 
+	font-style: normal;
+	font-weight: normal;
+	src: 	url('../assets/fonts/HelveticaNeueLTCom-Roman.ttf'),
+			url('../assets/fonts/HelveticaNeueLTCom-Bd.ttf')   
+        	
+}
+
+@font-face{  
+	font-family: "HelveticaNeueLTCom-Bd"; 
+	font-style: normal;
+	font-weight: normal;
+	src:	url('../assets/fonts/HelveticaNeueLTCom-Bd.ttf')   
+        	
+}
+
+html{
+	margin:0;
+	padding: 0;
+	background: url(../assets/img/bg.jpg) no-repeat center fixed;
+	 -webkit-background-size: cover; /* pour Chrome et Safari */
+  	 -moz-background-size: cover; /* pour Firefox */
+  	 -o-background-size: cover; /* pour Opera */
+      background-size: cover; /* version standardisée */
+}
+
+
+body{
+	
+	color:#fff;
+}
+
+header{
+	width: 100%;
+	/*height: 110px;*/  	/* 133 */
+}
+
+input{
+	width: 474px;
+	height: 80px;
+	background-color: transparent;
+	border-color: transparent;
+	color: #87be2f;
+	font-family: HelveticaNeueLTCom-Bd;
+	font-size: 48pt;
+	text-align: center;
+}
+
+.logo{
+	width: 125px;
+	height: 100px;
+	margin-top: 2.2%;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(../assets/img/logo.png) no-repeat;
+	background-size: 100%;
+}
+
+#speechRecognition {
+	position: absolute;
+	top: -40px;
+	left: -430px;
+	z-index: 2
+}
+
+#ghostClick {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 10px;
+	height: 10px;
+	background: red;
+
+	z-index: 1
+}
+
+
+/* ------------------------------------------------------------  
+						STYLE PAGE 0 VEILLE		  
+   ------------------------------------------------------------ */
+
+
+#BlocText{
+	width: 485px;
+	height: 100%;
+	color: #f8f8fb;
+	font-size: 15pt;
+	text-align: center;
+	margin: 8% auto 0 auto;
+	font-family: HelveticaNeueLTCom-Roman;	
+	border:solid #b0afaf;
+	border-width: 1px 0 1px 0;
+	padding: 15px 0 15px 0;
+}
+
+
+
+#enter{
+	height:20px;
+	color: #fbfafa;
+	font-family: HelveticaNeueLTCom-Bd;
+	font-size: 11pt;
+	text-align: center;
+	margin: auto;
+}
+
+#start{
+	width: 450px;
+	height: 90px;
+	border: solid 1px #292930;
+	color: #87be2f;
+	font-family: HelveticaNeueLTCom-Bd;
+	font-size: 15pt;
+	text-align: center;
+	margin: 125px auto 0 auto;
+	background: url(../assets/img/fond_button.png);
+}
+
+#name{
+	height: 82px;
+	/*margin-top: 20px;*/
+}
+
+
+
+/* ------------------------------------------------------------  
+						STYLE PAGE 1 DEMARRAGE 
+   ------------------------------------------------------------ */
+
+
+
+
+#cadre_video{
+	width: 635px;
+	height: 410px;
+	border-top: solid 1px #b0afaf;
+	border-bottom: solid 1px #bab8b8;
+	border-left: solid 1px #fff;
+	border-right: solid 1px #fff;
+	margin: 0px auto;
+}
+
+#in{
+	width: 635px;
+	height: 82px;
+	border: solid 1px #fff;
+	color: #87be2f;
+	font-family: HelveticaNeueLTCom-Bd;
+	font-size: 48pt;
+	text-align: center;
+	margin: 6% auto;
+}
+
+#name{
+	height: 82px;
+	/*margin-top: 20px;*/
+}
+
+#name2{
+	width: 122px;
+	height: 55px;
+	border-bottom: solid 1px #bab8b8;
+	margin: 0 auto 0 auto;
+	color: #47b3ce;
+	font-family: HelveticaNeueLTCom-Bd;
+	text-align: center;
+}
+
+#name2_1{
+	height: 54px;
+	width: 60px;
+	margin: 0 auto 0 auto;
+	padding-top: 25%;
+}
+
+#question{
+	width: 638px;
+	height:82px;
+	margin: 2.5% auto 0 auto;
+	text-align: center;
+	font-family: HelveticaNeueLTCom-Bd;
+}
+
+#cadreG{
+	width: 35px;
+	height: 82px;
+	float: left;
+	border: 1px solid #fff;
+	border-width: 1px 0px 1px 1px;
+		
+}
+
+#textQuestion{
+	width: 566px;
+	height: 82px;
+	float: left;
+	padding-top: 5%;
+	}
+
+#cadreD{
+	width: 35px;
+	height: 82px;
+	float:right;
+	border: 1px solid #fff;
+	border-width: 1px 1px 1px 0;	
+} 
+
+/* ------------------------------------------------------------  
+						STYLE PAGE 3	  
+   ------------------------------------------------------------ */
+
+
+#load{
+	width:83px;
+	height: 42px;
+	background: url(../assets/img/loader.gif) no-repeat;
+	margin: 1% auto 0 auto;
+	background-size: 100%;
+}
+
+/* ------------------------------------------------------------  
+						STYLE PAGE 4	  
+   ------------------------------------------------------------ */
+
+#cadre_rond{
+   	width: 424px;
+	height: 406px;
+	margin: 0px auto;
+	background: url(../assets/img/rond.png) no-repeat;
+	padding-bottom: 62px;
+}
+
+   /* ------------------------------------------------------------  
+						STYLE PAGE 7	  
+   ------------------------------------------------------------ */
+
+#cadre_video_petit{
+   	width: 635px;
+	height: 235px;
+	border-top: solid 1px #b0afaf;
+	border-bottom: solid 1px #bab8b8;
+	border-left: solid 1px #fff;
+	border-right: solid 1px #fff;
+	margin: 0px auto;
+}
+
+#blockHead{
+	width: 345px;
+	height: 231px;
+	margin: 0 auto 0 auto;
+}
+
+.quel, #element{
+   	width: 100%;
+   	font-family: HelveticaNeueLTCom-Bd;
+   	text-align: center;
+   	margin: auto;
+
+}
+
+.quel{
+	font-size: 16pt;
+	color: #fff;
+}
+
+#element{
+	color: #a1e8e0;
+	font-size: 22pt;
+}
+
+#picto{
+	width: 100%;
+	height: 78px;
+	background: url(../assets/img/picto.png) no-repeat;
+	margin-top: 40px; 
+}
+
+#textHumeur{
+	width: 566px;
+	height: 82px;
+	float: left;
+}
+
+/* ------------------------------------------------------------  
+						STYLE PAGE 11  
+   ------------------------------------------------------------ */
+
+   #load2{
+	width:83px;
+	height: 42px;
+	margin: 1% auto 0 auto;
+}
+

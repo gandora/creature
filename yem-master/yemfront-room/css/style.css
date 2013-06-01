@@ -1,0 +1,651 @@
+@font-face{  
+	font-family: "HelveticaNeueLTCom-Roman"; 
+	font-style: normal;
+	font-weight: normal;
+	src: 	url('../assets/fonts/HelveticaNeueLTCom-Roman.ttf'),
+			url('../assets/fonts/HelveticaNeueLTCom-Bd.ttf')   
+        	
+}
+
+@font-face{  
+	font-family: "HelveticaNeueLTCom-Bd"; 
+	font-style: normal;
+	font-weight: normal;
+	src:	url('../assets/fonts/HelveticaNeueLTCom-Bd.ttf')   
+        	
+}
+
+@font-face{  
+	font-family: "HelveticaNeueLTCom-LtCn"; 
+	font-style: normal;
+	font-weight: normal;
+	src:	url('../assets/fonts/HelveticaNeueLTCom-LtCn.ttf')   
+        	
+}
+
+@font-face{  
+	font-family: "AndradeSwashes"; 
+	font-style: normal;
+	font-weight: normal;
+	src:	url('../assets/fonts/Andrade Pro Swashes.ttf')   
+        	
+}
+
+
+@-webkit-keyframes Rotate {
+
+	from {-webkit-transform:rotateY(0deg);}
+	to {-webkit-transform:rotateY(90deg);}
+}
+
+
+@-webkit-keyframes Fade {
+
+	from {opacity:0.3;}
+	to {opacity:1;}
+}
+
+@-webkit-keyframes Fadein {
+
+	from {opacity:0;}
+	to {opacity:1;}
+}
+
+@-webkit-keyframes Fadeout {
+
+	from {opacity:1;}
+	to {opacity:0;}
+}
+
+@-webkit-keyframes Blink {
+	from {box-shadow:0px 0px 30px white;}
+	to {box-shadow:0px 0px 0px white;}
+}
+
+
+
+
+
+
+
+.rotate{
+	-webkit-animation-name: Rotate;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-timing-function: cubic-bezier(0,0,0,0);
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+}
+
+.blink{
+	-webkit-animation-name: Blink;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-timing-function: cubic-bezier(0.3,0.1,0.9,0.7);
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+}
+
+.fade{
+	-webkit-animation-name: Fade;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-timing-function: cubic-bezier(0,0,0,0);
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+}
+
+.fadein{
+	-webkit-animation-name: Fadein;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: cubic-bezier(0,0,0,0);
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.fadeout{
+	-webkit-animation-name: Fadeout;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: cubic-bezier(0,0,0,0);
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html{
+	margin:0;
+	padding: 0;
+	background-color: black;
+	background: url(../assets/img/bg.jpg) no-repeat center fixed; 
+	/* -webkit-background-size: cover; 
+  	 -moz-background-size: cover; 
+  	 -o-background-size: cover; 
+      background-size: cover;  */ 
+}
+
+
+body{
+	
+	color:#fff;
+}
+
+header{
+	width: 100%;
+	/*height: 110px;*/  	/* 133 */
+}
+
+input{
+	width: 474px;
+	height: 80px;
+	background-color: transparent;
+	border-color: transparent;
+	color: #87be2f;
+	font-family: HelveticaNeueLTCom-Bd;
+	font-size: 48pt;
+	text-align: center;
+	padding-left: 50px;
+}
+
+.logo{
+	width: 125px;
+	height: 100px;
+	margin-top: 2.2%;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(../assets/img/logo.png) no-repeat;
+	background-size: 100%;
+}
+
+#speechRecognition {
+	position: absolute;
+	bottom: 40px;
+	left: 30%;
+	width: 20%;
+	z-index: 2;
+	margin: 0; padding: 0;
+}
+
+#ghostClick {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 10px;
+	height: 10px;
+	background: red;
+
+	z-index: 1
+}
+
+
+/* ------------------------------------------------------------  
+						STYLE PAGE 0 VEILLE		  
+   ------------------------------------------------------------ */
+
+
+#BlocText{
+	width: 485px;
+	height: 100%;
+	color: #f8f8fb;
+	font-size: 24pt;
+	margin: 7% auto 0 auto;
+	font-family: HelveticaNeueLTCom-LtCn;	
+	padding: 15px 0 15px 0;
+	text-align:center;
+}
+
+#BlocText p:nth-of-type(1){
+	font-family:"AndradeSwashes";
+	color:#a1e8e0;
+}
+
+
+#BlocText p:nth-of-type(2){
+	font-size:0.7em;
+	
+}
+
+
+
+#start{
+	width: 380px;
+	height: 80px;
+	font-family: HelveticaNeueLTCom-Bd;
+	font-size: 13pt;
+	text-align: center;
+	margin: 8% auto 0 auto;
+
+}
+
+#screen {
+	z-index: 2;
+}
+
+svg {
+	z-index: -1;
+}
+
+/* ------------------------------------------------------------  
+						PAGE 1 DEMMARAGE	  
+   ------------------------------------------------------------ */
+#text{
+	font-family: HelveticaNeueLTCom-Roman;
+	width: 413px;
+	height:100%;
+	float: left;
+	padding-top: 20px;
+}
+
+#presentation{
+	width: 635px;
+	height: 82px;
+	color: #fff;
+	font-family: HelveticaNeueLTCom-Roman;
+	font-size: 12pt;
+	text-align: center;
+	margin: auto;
+	padding-top: 3%;
+
+}
+
+#instruction{
+	width: 635px;
+	height: 100px;
+	color: #fff;
+	font-family: HelveticaNeueLTCom-Roman;
+	font-size: 13pt;
+	text-align: center;
+	margin: auto;
+	padding-top: 5%;
+	opacity:0;
+}
+
+.cadreG{
+	width: 35px;
+	height: 100px;
+	float: left;
+	border: 1px solid #615f5f;
+	border-width: 1px 0px 1px 1px;
+		
+}
+
+#phrase{
+	height: 100px;
+	color: #615f5f;
+	width: 550px;
+	float: left;
+	text-align: center;
+	margin: 1% auto 0 auto;
+}
+
+.cadreD{
+	width: 35px;
+	height: 100px;
+	float:right;
+	border: 1px solid #615f5f;
+	border-width: 1px 1px 1px 0;	
+} 
+
+#mic{
+	width: 40px;
+	height:40px;
+	background: url(../assets/img/mic.png) no-repeat;
+	background-size: 50%;
+	margin: auto;
+}
+
+#instructionPrenom{
+	width: 635px;
+	height: 100px;
+	color: #fff;
+	font-family: HelveticaNeueLTCom-Roman;
+	font-size: 13pt;
+	text-align: center;
+	margin: auto;
+	padding-top: 5%;
+	opacity:0;
+}
+
+#phrasePrenom{
+	height: 100px;
+	color: #615f5f;
+	width: 550px;
+	float: left;
+	text-align: center;
+	margin: 5% auto 0 auto;
+}
+
+#speech_surname {
+	display: none;
+}
+
+/* ------------------------------------------------------------  
+						PAGE 2 ACQUISITION	  
+   ------------------------------------------------------------ */
+
+#instructionScan{
+	width: 635px;
+	height: 100px;
+	color: #fff;
+	font-family: HelveticaNeueLTCom-Roman;
+	font-size: 13pt;
+	text-align: center;
+	margin: auto;
+	padding-top: 2%;
+}
+
+.cadreG2{
+	width: 35px;
+	height: 50px;
+	float: left;
+	border: 1px solid #fff;
+	border-width: 1px 0px 1px 1px;
+		
+}
+
+#phrase2{
+	color: #fff;
+	width: 550px;
+	float: left;
+	text-align: center;
+	margin: 2% auto 0 auto;
+}
+
+.cadreD2{
+	width: 35px;
+	height: 50px;
+	float:right;
+	border: 1px solid #fff;
+	border-width: 1px 1px 1px 0;	
+} 
+
+#frame_video{
+	width: 635px;
+	height: 300px;
+	color: #fff;
+	font-family: HelveticaNeueLTCom-Roman;
+	font-size: 13pt;
+	text-align: center;
+	margin: auto;
+	border-width: 1px 1px 1px 1px;
+	border : solid #fff;
+}
+
+#name{
+	height: 82px;
+	padding-top: 20px;
+}
+
+#name2{
+	width: 122px;
+	height: 30px;
+	border-bottom: solid 1px #bab8b8;
+	margin: 0 auto 0 auto;
+	color: #47b3ce;
+	font-family: HelveticaNeueLTCom-Bd;
+	text-align: center;
+	padding-top: 15px;
+}
+
+/* ------------------------------------------------------------  
+			 PAGE 3 INTERPRETATION DE L'ACQUISITION  
+   ------------------------------------------------------------ */
+#surpris{
+	width: 635px;
+	height: 100px;
+	color: #39bff2;
+	font-family: HelveticaNeueLTCom-Bd;
+	font-size: 22pt;
+	text-align: center;
+	margin: 5% auto 0 auto;
+}
+
+#text_interpretation{
+	width: 635px;
+	height: 100px;
+	color: #fff;
+	font-family: HelveticaNeueLTCom-Roman;
+	font-size: 12pt;
+	text-align: center;
+	margin: auto;
+}	
+
+/* ------------------------------------------------------------  
+			 PAGE 4 Transition/introduction au questionnaire  
+   ------------------------------------------------------------ */
+#contener_text{
+	width:635px;
+	height: 350px;
+	margin: 2% auto 0 auto;
+	text-align: center;
+	font-size: 40pt;
+}
+
+#initialisation{
+	font-family: HelveticaNeueLTCom-LtCn;
+	color: #379cb5;
+}
+
+#de{
+	font-family: HelveticaNeueLTCom-LtCn;
+	color: #f8fcfc;
+	padding-top: 25px;
+}
+
+#analyse{
+	font-family: HelveticaNeueLTCom-Bd;
+	color: #f8fcfc;
+	padding-top: 30px;
+}
+
+#sensorielle{
+	font-family:HelveticaNeueLTCom-Bd;
+	color: #a1e8e0;
+	padding-top: 30px;
+}
+
+/* ------------------------------------------------------------  
+			 PAGE 5 questionnaire  
+   ------------------------------------------------------------ */
+#question{
+
+	font-family: "AndradeSwashes";
+	font-size:2em;
+	text-align:center;
+	margin-top:60px;
+
+}
+
+
+#question_variable{
+	width: 635px;
+	height: 60px;
+	color: #fff;
+	font-family: "AndradeSwashes";
+	font-size: 12pt;
+	text-align: center;
+	margin: auto;
+	padding-top: 4%;
+	border: solid #fff;
+	border-width: 0 1px 0 1px;
+}
+
+#conteneur_Question{
+	width: 635px;
+	height:270px;
+	margin: 3% auto 0 auto;
+	text-align: center;
+}
+
+.encadrementQuestion{
+	width:250px;
+	height: 50px;
+	margin: 40px auto 0 auto;
+	text-align: center;
+	font-family:"HelveticaNeueLTCom-LtCn";
+	color: #a1e8e0;
+	padding-top: 20px;
+	display: inline-block;
+	font-size: 1.5em;
+	font-weight:bold;
+}
+
+#reponse_groupe_gauche{
+	width: 305px;
+	height: 250px;
+	float: left;
+}
+
+#reponse_groupe_droite{
+	height: 250px;
+	width: 305px;
+	float: right;
+}
+	
+
+/* ------------------------------------------------------------  
+			 PAGE 6 RESULTAT QUESTIONNAIRE  
+   ------------------------------------------------------------ */
+
+#espace_video{
+	width: 600px;
+	height: 250px;
+	color: #fff;
+	font-family: HelveticaNeueLTCom-Roman;
+	font-size: 13pt;
+	text-align: center;
+	margin: auto;
+	border-width: 1px 1px 1px 1px;
+	border : solid #fff;
+}
+
+#slider_plat{
+	width: 300px;
+	height: 120px;
+	margin: 1% auto 0 auto;
+	color: #47b3ce;
+	font-family: HelveticaNeueLTCom-Bd;
+	text-align: center;
+	padding-top: 15px;
+}
+
+#phrase_proposition{
+	width: 250px;
+	font-family: HelveticaNeueLTCom-Bd;
+	margin: 40px auto 0 auto;
+	text-align: center;
+}
+
+#slider_plat h3 {
+	font-size: 30px;
+	font-family: HelveticaNeueLTCom-LtCn;
+}
+
+h2#meatType {
+	font-family: "AndradeSwashes";
+	font-size: 3em;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+/* ------------------------------------------------------------  
+			 PAGE 7 FIN DE L EXPERIENCE  
+   ------------------------------------------------------------ */
+
+#espace_menu{
+	width: 500px;
+	height: 250px;
+	color: #fff;
+	text-align: center;
+	margin: auto;
+}
+
+.elmt_menu{
+	color: #17d4c5;
+	font-size: 18pt;
+	font-family: HelveticaNeueLTCom-LtCn;
+	margin-top: 20px;
+}
+
+.menu_variable{
+	width: 300px;
+	height: 40px;
+	font-family:HelveticaNeueLTCom-LtCn;
+	margin: auto;
+}
+
+#merci{
+	width: 300px;
+	height: 120px;
+	margin-top: 3%;
+	margin-left: 25%;
+	color: #17d4c5;
+	font-family: HelveticaNeueLTCom-Bd;
+	text-align: center;
+	padding-top: 15px;
+	float: left;
+}
+
+#trait{
+	width: 124px;
+	height: 4px;
+	margin: 3% auto 0 auto;
+	background-color: #777777;
+}
+
+#serveur{
+	width: 142px;
+	height: 155px;
+	margin-right: 30%;
+	margin-top: 3%;
+	float: right;
+	background: url(../assets/img/serveur.jpg) no-repeat;
+	background-size: 90%;
+}
+
+#phrase_proposition{
+	width: 250px;
+	font-family: HelveticaNeueLTCom-Bd;
+	margin: 80px auto 0 auto;
+	text-align: center;
+}
+
+
+/* ------------------------------------------------------------  
+						Brouillon	  
+   ------------------------------------------------------------ */
+
+
+
+
+/* a supprimer */
+#name{
+	height: 82px;
+	/*margin-top: 20px;*/
+}
+
+#enter{
+	height:20px;
+	color: #fbfafa;
+	font-family: HelveticaNeueLTCom-Bd;
+	font-size: 11pt;
+	text-align: center;
+	margin: auto;
+}
